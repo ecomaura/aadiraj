@@ -59,6 +59,29 @@ footer b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;c
  section{padding:48px 0}
  h2{font-size:1.9rem}
 }
+
+.call{color:var(--gold-l)!important;border:1px solid var(--gold);padding:5px 12px;border-radius:2px}
+.btn.dk{color:var(--maroon);border-color:var(--maroon)}
+.btn.dk:hover{background:rgba(122,18,48,.08)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px;margin:0 -22px;padding-left:22px;padding-right:22px;position:sticky;top:58px;background:#f2e8d3;z-index:5;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{white-space:nowrap;font-size:.76rem;letter-spacing:.06em;text-decoration:none;padding:7px 14px;border:1px solid var(--gold);border-radius:20px;color:var(--maroon-d);background:var(--cream)}
+.chips a:hover{background:var(--maroon);color:var(--cream)}
+.cats{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:10px}
+.cat{background:var(--cream);border:1px solid #dcc995;border-radius:3px;overflow:hidden;scroll-margin-top:120px}
+.cat img{display:block;width:100%;height:170px;object-fit:cover}
+.cat-h{padding:16px 20px 6px}
+.cat-h h3{font-size:1.7rem;color:var(--maroon)}
+.cat-h p{font-size:.84rem;color:#6a5a5d;margin-top:2px}
+.cat ul{list-style:none;padding:6px 20px 14px}
+.cat li{padding:9px 0;border-bottom:1px dotted #cdb98c}
+.cat li:last-child{border:0}
+.cat li b{display:block;font-weight:600;font-size:.95rem;color:var(--ink)}
+.cat li span{display:block;font-size:.83rem;color:#6a5a5d;line-height:1.5}
+.cat.jain{border-color:#4f8a3a}
+.cat.jain .cat-h h3::before{content:"";display:inline-block;width:12px;height:12px;border:2px solid #2f7a1f;margin-right:10px;border-radius:2px;background:radial-gradient(#2f7a1f 45%,transparent 50%)}
+.note a{font-weight:600}
+@media(max-width:760px){.cats{grid-template-columns:1fr}.cat img{height:150px}nav a{margin-left:12px}}
 </style>
 </head>
 <body>
@@ -66,7 +89,7 @@ footer b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;c
 <header>
  <div class="wrap">
   <a class="brand" href="#top">AADIRAJ</a>
-  <nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav>
+  <nav><a href="#menu">Menu</a><a href="#visit">Visit</a><a class="call" href="tel:+919833336336">Call</a></nav>
  </div>
 </header>
 
@@ -74,8 +97,9 @@ footer b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;c
 <div class="intro">
  <p>Good snacks, hot chai and cool refreshments, made fresh and served with care in the heart of Uthalsar, Thane West.</p>
  <div class="btns">
-  <a class="btn fill" href="https://maps.app.goo.gl/4yt7X8fiUx2Wr8X46?g_st=ac" target="_blank" rel="noopener">Get Directions</a>
-  <a class="btn line" href="#menu">See What We Serve</a>
+  <a class="btn fill" href="#menu">See the Menu</a>
+  <a class="btn line" href="https://maps.app.goo.gl/4yt7X8fiUx2Wr8X46?g_st=ac" target="_blank" rel="noopener">Directions</a>
+  <a class="btn line" href="tel:+919833336336">Call +91 98333 36336</a>
  </div>
 </div>
 
@@ -88,8 +112,8 @@ footer b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;c
    <p>We pick our ingredients carefully, cook in small batches and keep the menu honest. Come by for a quick bite on your way home, a tea break with friends, or something cold on a warm Thane afternoon.</p>
   </div>
   <div class="facts">
-   <div><b>Fresh every day</b><span>Prepared through the day, not reheated from yesterday.</span></div>
-   <div><b>Quick and easy</b><span>Dine in, grab and go, or pick up on your way.</span></div>
+   <div><b>Fresh every day</b><span>Sprout chaats, grilled sandwiches, momos, pizzas, juices, shakes and falooda.</span></div>
+   <div><b>Jain options</b><span>Sandwiches, pizza and momos with no onion, no garlic.</span></div>
    <div><b>Right on Kolbad Road</b><span>Kavita Apartments, Uthalsar, Thane West.</span></div>
   </div>
  </div>
@@ -99,35 +123,20 @@ footer b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;c
  <div class="wrap">
   <div class="eyebrow">The Menu</div>
   <h2>What we serve</h2>
-  <div class="cols">
-   <div>
-    <h3>Snacks</h3>
-    <ul>
-     <li>Vada Pav</li>
-     <li>Samosa<small>Crisp, served hot with chutney</small></li>
-     <li>Sandwiches</li>
-     <li>Pav Bhaji</li>
-    </ul>
-   </div>
-   <div>
-    <h3>Hot Drinks</h3>
-    <ul>
-     <li>Masala Chai</li>
-     <li>Filter Coffee</li>
-     <li>Hot Milk</li>
-    </ul>
-   </div>
-   <div>
-    <h3>Cold Refreshments</h3>
-    <ul>
-     <li>Cold Coffee</li>
-     <li>Lime Soda</li>
-     <li>Fresh Juices</li>
-     <li>Chilled Soft Drinks</li>
-    </ul>
-   </div>
+  <div class="chips"><a href="#chaat">Sprout Chaats</a><a href="#sandwiches">Sandwiches</a><a href="#grill">Magic of Grill</a><a href="#jain">Jain Special</a><a href="#momos">Veg Momos</a><a href="#fries">French Fries &amp; Add-ons</a><a href="#pizza">Pizzas</a><a href="#juices">Fresh Juices &amp; Coolers</a><a href="#shakes">Thick Shakes</a><a href="#falooda">Falooda</a></div>
+  <div class="cats">
+<div class="cat" id="chaat"><div class="cat-h"><h3>Sprout Chaats</h3><p>Nutritious, freshly sprouted and tossed with Aadiraj special chutney and cold-pressed lemon juice.</p></div><ul><li><b>Classic Moong Sprout Chaat</b><span>Fresh green moong, onions, tomatoes, green chillies, coriander and chaat masala.</span></li><li><b>Classic Chana Sprout Chaat</b><span>Sprouted black chana with onions, tomatoes, green chillies, coriander and chaat masala.</span></li><li><b>Mixed Bean Protein Chaat</b><span>High-protein mix of sprouted moong, chana, kabuli chana, corn and mataki.</span></li><li><b>Corn &amp; Veggi Crunch</b><span>Steamed sweet corn with finely diced onions, tomatoes, green chillies and coriander.</span></li><li><b>Aloo Sprout Fusion Chaat</b><span>Steamed sprouts with boiled potato cubes, sweet-sour chutneys and crispy sev.</span></li><li><b>Aadiraj Special Sprout &amp; Vegetable Fusion</b><span>Sprouted moong, chana, kabuli chana, corn and mataki with cucumber, beetroot and carrot.</span></li></ul></div>
+<div class="cat" id="sandwiches"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>Sandwiches</h3><p>Fresh bread, Amul butter, crisp seasonal vegetables, Aadiraj green chutney and our special sandwich masala.</p></div><ul><li><b>Classic Veg Sandwich</b><span>Triangle bread, crisp seasonal vegetables, green chutney and sandwich masala.</span></li><li><b>Classic Veg Sandwich with Cheese</b><span>The classic, with a slice of cheese.</span></li></ul></div>
+<div class="cat" id="grill"><img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>Magic of Grill: Crispy Sandwiches</h3><p>Grilled until golden and crisp.</p></div><ul><li><b>Classic Veg Grilled Sandwich</b><span>Seasonal vegetables, green chutney and sandwich masala.</span></li><li><b>Classic Veg Cheese Grilled Sandwich</b><span>Fresh vegetables with melted cheese slices and green chutney.</span></li><li><b>Veggie Mayo Grilled Sandwich</b><span>Seasonal vegetables, green chutney and masala, loaded with mayonnaise.</span></li><li><b>Cheese Chilli Grilled Sandwich</b><span>Mozzarella, chopped green capsicum and chillies.</span></li><li><b>Corn &amp; Cheese Sandwich</b><span>Creamy sweet corn and mozzarella.</span></li><li><b>Only Cheese Grill Sandwich</b><span>Grated cheese and Aadiraj sandwich masala.</span></li><li><b>Chutney Cheese Grill Sandwich</b><span>Grated cheese with Aadiraj special green chutney.</span></li><li><b>Paneer Tikka Sandwich</b><span>Marinated paneer and cheese cubes with tandoori spices, capsicum and mayo.</span></li><li><b>Bombay Masala Cheese Grilled Sandwich</b><span>Classic Mumbai style with spiced potato mash, tomatoes, onions and mint chutney.</span></li><li><b>Schezwan Cheese Grilled Sandwich</b><span>Crisp vegetables and cheese with spicy Schezwan chutney.</span></li></ul></div>
+<div class="cat jain" id="jain"><div class="cat-h"><h3>Jain Special</h3><p>No onion, no garlic. Sandwiches, pizza and momos.</p></div><ul><li><b>Jain Classic Veg Grilled Sandwich</b><span>Fresh bread, Amul butter, crisp vegetables and green chutney.</span></li><li><b>Jain Classic Veg Cheese Grilled Sandwich</b><span>Fresh vegetables and melted cheese slices with green chutney.</span></li><li><b>Jain Classic Veg Sandwich</b><span>Seasonal vegetables, green chutney and in-house sandwich masala.</span></li><li><b>Jain Classic Veg Sandwich with Cheese</b><span>The Jain classic, with a cheese slice.</span></li><li><b>Jain Classic Veg Momos</b><span>Steamed, juicy dumplings filled with a flavourful vegetable mix.</span></li><li><b>Jain Veggie Delight Pizza</b><span>8&quot; base with capsicum, tomatoes, sweet corn, black olives and cheese, with chilli flakes, oregano and pepper.</span></li></ul></div>
+<div class="cat" id="momos"><img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>Veg Momos</h3><p>Steamed, juicy and made fresh.</p></div><ul><li><b>Classic Veg Momos</b><span>Cabbage, carrots, onions and aromatic herbs.</span></li><li><b>Paneer Veg Momos</b><span>Soft dumplings stuffed with seasoned crumbled paneer and Indian spices.</span></li><li><b>Corn &amp; Cheese Momos</b><span>Sweet corn and melted cheese in delicate dough.</span></li><li><b>Tandoori Veg Momos</b><span>Marinated in tandoori spices and grilled for a smoky flavour.</span></li><li><b>Crispy Fried Veg Momos</b><span>Golden-fried with a crunchy outside and flavourful filling.</span></li><li><b>Peri Peri Momos</b><span>Steamed and tossed in zesty, tangy peri peri seasoning.</span></li></ul></div>
+<div class="cat" id="fries"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>French Fries &amp; Add-ons</h3><p>Golden, deep-fried and crisp.</p></div><ul><li><b>Classic Salted Fries</b><span>Crisp potato strips with fine sea salt.</span></li><li><b>Peri-Peri Spicy Fries</b><span>Tossed in fiery, tangy peri-peri spice dust.</span></li><li><b>Loaded Cheese Fries</b><span>Drizzled generously with warm, silky cheddar cheese sauce.</span></li><li><b>Spicy Oregano Fries</b><span>Seasoned with oregano and chilli flakes.</span></li></ul></div>
+<div class="cat" id="pizza"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>Pizzas</h3><p>All on an 8&quot; pizza base.</p></div><ul><li><b>Mexican Fiesta Pizza</b><span>Jalapeños, black olives, sweet corn, onion, tomatoes, capsicum and Mexican herbs.</span></li><li><b>Schezwan Veg Pizza</b><span>Spicy Schezwan sauce, crunchy vegetables and melted cheese.</span></li><li><b>Corn &amp; Cheese Pizza</b><span>Sweet golden corn with creamy mozzarella.</span></li><li><b>Farm Fresh Pizza</b><span>Capsicum, onion and tomato with mozzarella and aromatic herbs.</span></li><li><b>Veggie Delight Pizza</b><span>Onions, capsicum, tomatoes, sweet corn, black olives and cheese.</span></li></ul></div>
+<div class="cat" id="juices"><img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>Fresh Juices &amp; Coolers</h3><p>Every glass is 250 ml.</p></div><ul><li><b>Classic Orange Juice</b><span>100% pure, cold-pressed sweet oranges.</span></li><li><b>Classic Mosambi Juice</b><span>100% pure, cold-pressed sweet mosambi.</span></li><li><b>ABC Detox Juice</b><span>Cold-pressed apple, beetroot and carrot.</span></li><li><b>Fresh Beetroot Juice</b><span>Naturally sweet, full of earthy flavour.</span></li><li><b>Green Glow Elixir</b><span>Cucumber, green apple, amla and celery.</span></li><li><b>Watermelon Mint Cooler</b><span>Muddled watermelon with fresh garden mint and a splash of lime.</span></li><li><b>Fresh Lemon Water</b><span>Classic sweet-and-salted lemon cooler.</span></li><li><b>Fresh Lemon, Chia Seeds Juice</b><span>Sweet-and-salted lemon with chia seeds.</span></li><li><b>Fresh Lemon, Mint Leaves and Chia Seeds Juice</b><span>Lemon, fresh mint and chia seeds to beat the heat.</span></li><li><b>Kokum Juice with Mint Leaves and Chia Seeds</b><span>Cooling kokum sherbet with fresh mint and chia seeds.</span></li></ul></div>
+<div class="cat" id="shakes"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>Thick Shakes</h3><p>Rich, ultra-creamy, made with premium dairy bases. 250 ml.</p></div><ul><li><b>Sitafal Thick Shake</b><span>Seasonal custard apple.</span></li><li><b>Mango Thick Shake</b><span>Seasonal mango.</span></li><li><b>Chickoo Thick Shake</b><span>Seasonal chickoo.</span></li><li><b>Strawberry Thick Shake</b><span>Strawberry milkshake.</span></li><li><b>Lichi Cream Shake</b><span>Fragrant, creamy and rich with litchi.</span></li><li><b>Musk Melon Shake</b><span>Refreshingly smooth, with natural melon sweetness.</span></li><li><b>Cold Coffee Cream Milkshake</b><span>Rich, creamy cold coffee.</span></li></ul></div>
+<div class="cat" id="falooda"><img src="https://images.unsplash.com/photo-1664138218128-2dcf791a9d27?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" onerror="this.remove()"><div class="cat-h"><h3>Falooda</h3><p>Classic Indian dessert drinks.</p></div><ul><li><b>Aadiraj Special Falooda</b><span>Mix fruit syrup, vermicelli, basil seeds, kulfi, dry fruits and rich dessert topping.</span></li><li><b>Royal Falooda</b><span>Rose syrup, vermicelli, basil seeds, milk, ice cream, nuts and dried fruits.</span></li><li><b>Kesar Pista Falooda</b><span>Rich and creamy, with saffron and pistachios.</span></li><li><b>Kulfi Falooda</b><span>Classic falooda topped with authentic Indian kulfi.</span></li><li><b>Mango Falooda</b><span>Mango puree, mango ice cream, vermicelli and basil seeds.</span></li><li><b>Strawberry Falooda</b><span>Strawberry syrup, milk, basil seeds, vermicelli and fresh strawberries.</span></li><li><b>Dry Fruit Falooda</b><span>Almonds, cashews, pistachios and raisins with premium ice cream.</span></li><li><b>Rose Falooda</b><span>Fragrant rose syrup, falooda sev, basil seeds and chilled milk.</span></li><li><b>Rabdi Falooda</b><span>Thick rabdi garnished with nuts.</span></li><li><b>Black Currant Falooda</b><span>Black currant syrup, ice cream, basil seeds and vermicelli.</span></li><li><b>Sitaphal (Custard Apple) Falooda</b><span>Creamy custard apple pulp with ice cream.</span></li></ul></div>
   </div>
-  <p class="note">Items change with the day and the season. Ask at the counter for today’s specials and current prices.</p>
+  <p class="note">Ask at the counter for today’s prices. Call or WhatsApp <a href="tel:+919833336336">+91 98333 36336</a> for orders.</p>
  </div>
 </section>
 
@@ -142,7 +151,8 @@ footer b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;c
     Kolbad Road, Uthalsar<br>
     Thane West, Maharashtra 400601
    </address>
-   <a class="btn fill" href="https://maps.app.goo.gl/4yt7X8fiUx2Wr8X46?g_st=ac" target="_blank" rel="noopener">Open in Google Maps</a>
+   <p style="margin-bottom:18px">Phone: <a href="tel:+919833336336"><strong>+91 98333 36336</strong></a></p>
+   <div class="btns" style="justify-content:flex-start"><a class="btn fill" href="tel:+919833336336">Call Now</a><a class="btn line dk" href="https://wa.me/919833336336" target="_blank" rel="noopener">WhatsApp</a><a class="btn line dk" href="https://maps.app.goo.gl/4yt7X8fiUx2Wr8X46?g_st=ac" target="_blank" rel="noopener">Google Maps</a></div>
   </div>
   <iframe class="map" title="Map to Aadiraj Snacks and Refreshments" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
    src="https://maps.google.com/maps?q=Aadiraj+Snacks+and+Refreshments,+Kavita+Apartments,+Kolbad+Rd,+Uthalsar,+Thane+West&amp;output=embed"></iframe>
@@ -151,7 +161,7 @@ footer b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;c
 
 <footer>
  <b>AADIRAJ</b>
- Snacks &amp; Refreshments &middot; Curating Taste &middot; Est. 2026
+ Snacks &amp; Refreshments &middot; Curating Taste &middot; Est. 2026<br>+91 98333 36336
 </footer>
 
 </body>
