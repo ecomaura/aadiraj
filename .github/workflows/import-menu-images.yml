@@ -17,6 +17,35 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Apply individual image replacements
+        run: |
+          ARCHIVE="aadiraj_menu_image_replacements.zip"
+          if [ -f "$ARCHIVE" ]; then
+            rm -rf /tmp/aadiraj-menu-replacements
+            mkdir -p /tmp/aadiraj-menu-replacements assets/menu
+            unzip -q "$ARCHIVE" -d /tmp/aadiraj-menu-replacements
+            python - <<'PY'
+          from pathlib import Path
+          import shutil
+
+          source = Path("/tmp/aadiraj-menu-replacements")
+          expected = {
+              "classic_salted_fries.jpg",
+              "peri_peri_spicy_fries.jpg",
+              "mexican_fiesta_pizza.jpg",
+              "schezwan_veg_pizza.jpg",
+              "classic_orange_juice.jpg",
+              "classic_mosambi_juice.jpg",
+          }
+          images = {p.name.lower(): p for p in source.rglob("*") if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg"}}
+          if set(images) != expected:
+              raise SystemExit(f"Expected exactly {sorted(expected)}; found {sorted(images)}")
+          for name, image in images.items():
+              shutil.copy2(image, Path("assets/menu") / name)
+          print(f"Replaced {len(images)} menu photos.")
+          PY
+          fi
+
       - name: Extract and validate 67 menu photos
         run: |
           ARCHIVE="aadiraj_67_dish_images.zip"
@@ -92,7 +121,7 @@ jobs:
 
       - name: Commit imported images and menu updates
         run: |
-          rm -f aadiraj_67_dish_images.zip "aadiraj_67_dish_images(1).zip"
+          rm -f aadiraj_67_dish_images.zip "aadiraj_67_dish_images(1).zip" aadiraj_menu_image_replacements.zip
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
