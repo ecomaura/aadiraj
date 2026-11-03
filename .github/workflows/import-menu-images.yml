@@ -3,9 +3,6 @@ name: Import Aadiraj menu photos
 on:
   push:
     branches: [main]
-    paths:
-      - "aadiraj_67_dish_images.zip"
-      - "aadiraj_67_dish_images(1).zip"
 
 permissions:
   contents: write
