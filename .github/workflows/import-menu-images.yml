@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "aadiraj_67_dish_images.zip"
+      - "aadiraj_67_dish_images(1).zip"
 
 permissions:
   contents: write
@@ -21,13 +22,17 @@ jobs:
 
       - name: Extract and validate 67 menu photos
         run: |
-          if [ ! -f aadiraj_67_dish_images.zip ]; then
+          ARCHIVE="aadiraj_67_dish_images.zip"
+          if [ ! -f "$ARCHIVE" ] && [ -f "aadiraj_67_dish_images(1).zip" ]; then
+            ARCHIVE="aadiraj_67_dish_images(1).zip"
+          fi
+          if [ ! -f "$ARCHIVE" ]; then
             echo "Photo archive is not present; nothing to import."
             exit 0
           fi
           rm -rf /tmp/aadiraj-menu-photos
           mkdir -p /tmp/aadiraj-menu-photos assets/menu
-          unzip -q aadiraj_67_dish_images.zip -d /tmp/aadiraj-menu-photos
+          unzip -q "$ARCHIVE" -d /tmp/aadiraj-menu-photos
           python - <<'PY'
           from pathlib import Path
           import shutil
@@ -90,7 +95,7 @@ jobs:
 
       - name: Commit imported images and menu updates
         run: |
-          rm -f aadiraj_67_dish_images.zip
+          rm -f aadiraj_67_dish_images.zip "aadiraj_67_dish_images(1).zip"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A assets/menu index.html aadiraj_67_dish_images.zip
