@@ -1,0 +1,102 @@
+name: Import Aadiraj menu photos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "aadiraj_67_dish_images.zip"
+
+permissions:
+  contents: write
+
+jobs:
+  import-menu-photos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Extract and validate 67 menu photos
+        run: |
+          if [ ! -f aadiraj_67_dish_images.zip ]; then
+            echo "Photo archive is not present; nothing to import."
+            exit 0
+          fi
+          rm -rf /tmp/aadiraj-menu-photos
+          mkdir -p /tmp/aadiraj-menu-photos assets/menu
+          unzip -q aadiraj_67_dish_images.zip -d /tmp/aadiraj-menu-photos
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+
+          source = Path("/tmp/aadiraj-menu-photos")
+          images = sorted(p for p in source.rglob("*") if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg"})
+          if len(images) != 67:
+              raise SystemExit(f"Expected 67 JPG images, found {len(images)}")
+          names = [p.name.lower() for p in images]
+          if len(set(names)) != 67:
+              raise SystemExit("Duplicate image filenames found; refusing to flatten folders.")
+          target = Path("assets/menu")
+          target.mkdir(parents=True, exist_ok=True)
+          for image in images:
+              shutil.copy2(image, target / image.name)
+          print(f"Imported {len(images)} menu photos.")
+          PY
+
+      - name: Update each menu item to use its own photo
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html import unescape, escape
+          import re
+
+          path = Path("index.html")
+          html = path.read_text(encoding="utf-8")
+          missing = []
+
+          def slugify(title):
+              title = title.lower()
+              title = re.sub(r"\\(([^)]*)\\)", r" \\1 ", title)
+              title = title.replace("&", " ")
+              return re.sub(r"[^a-z0-9]+", "_", title).strip("_")
+
+          def update_item(match):
+              inner = match.group(2)
+              title_match = re.search(r"<b>(.*?)</b>", inner, re.S)
+              image_match = re.search(r'<img class="menu-item-photo"[^>]*>', inner)
+              if not title_match or not image_match:
+                  return match.group(0)
+              title = unescape(re.sub(r"<[^>]+>", "", title_match.group(1))).strip()
+              filename = slugify(title) + ".jpg"
+              image_path = Path("assets/menu") / filename
+              if not image_path.exists():
+                  missing.append(filename)
+                  return match.group(0)
+              tag = image_match.group(0)
+              tag = re.sub(r'src="[^"]*"', f'src="{image_path.as_posix()}"', tag)
+              tag = re.sub(r'alt="[^"]*"', f'alt="{escape(title, quote=True)}"', tag)
+              inner = inner.replace(image_match.group(0), tag, 1)
+              return match.group(1) + inner + match.group(3)
+
+          updated = re.sub(r'(<li class="menu-item">)(.*?)(</li>)', update_item, html, flags=re.S)
+          if missing:
+              raise SystemExit("Missing matching images: " + ", ".join(missing))
+          path.write_text(updated, encoding="utf-8")
+          print("Updated menu image paths in index.html.")
+          PY
+
+      - name: Commit imported images and menu updates
+        run: |
+          rm -f aadiraj_67_dish_images.zip
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets/menu index.html aadiraj_67_dish_images.zip
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Add individual photos for all menu items"
+          git push origin HEAD:main
