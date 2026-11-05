@@ -324,7 +324,7 @@
           "name": "Mexican Fiesta Pizza",
           "price": 270,
           "description": "Jalapeños, black olives, sweet corn, onion, tomatoes, capsicum and Mexican herbs.",
-          "image": "assets/menu/mexican_fiesta_pizza.jpg",
+          "image": "assets/menu/mexican_fiesta_pizza_sf0j.jpg",
           "hidden": false
         },
         {
@@ -338,21 +338,21 @@
           "name": "Corn & Cheese Pizza",
           "price": 220,
           "description": "Sweet golden corn with creamy mozzarella.",
-          "image": "assets/menu/corn_cheese_pizza.jpg",
+          "image": "assets/menu/corn_cheese_pizza_qm3r.jpg",
           "hidden": false
         },
         {
           "name": "Farm Fresh Pizza",
           "price": 180,
           "description": "Capsicum, onion and tomato with mozzarella and aromatic herbs.",
-          "image": "assets/menu/farm_fresh_pizza.jpg",
+          "image": "assets/menu/farm_fresh_pizza_hn0f.jpg",
           "hidden": false
         },
         {
           "name": "Veggie Delight Pizza",
           "price": 250,
           "description": "Onions, capsicum, tomatoes, sweet corn, black olives and cheese.",
-          "image": "assets/menu/veggie_delight_pizza.jpg",
+          "image": "assets/menu/veggie_delight_pizza_d73k.jpg",
           "hidden": false
         }
       ]
