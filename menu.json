@@ -68,14 +68,14 @@
           "name": "Classic Veg Sandwich",
           "price": 110,
           "description": "Triangle bread, crisp seasonal vegetables, green chutney and sandwich masala.",
-          "image": "assets/menu/classic_veg_sandwich.jpg",
+          "image": "assets/menu/classic_veg_sandwich_9cux.jpg",
           "hidden": false
         },
         {
           "name": "Classic Veg Sandwich with Cheese",
           "price": 170,
           "description": "The classic, with a slice of cheese.",
-          "image": "assets/menu/classic_veg_sandwich_with_cheese.jpg",
+          "image": "assets/menu/classic_veg_sandwich_with_cheese_9h5z.jpg",
           "hidden": false
         }
       ]
