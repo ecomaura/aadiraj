@@ -94,70 +94,70 @@
           "name": "Classic Veg Grilled Sandwich",
           "price": 140,
           "description": "Seasonal vegetables, green chutney and sandwich masala.",
-          "image": "assets/menu/classic_veg_grilled_sandwich.jpg",
+          "image": "assets/menu/classic_veg_grilled_sandwich_d7ne.jpg",
           "hidden": false
         },
         {
           "name": "Classic Veg Cheese Grilled Sandwich",
           "price": 170,
           "description": "Fresh vegetables with melted cheese slices and green chutney.",
-          "image": "assets/menu/classic_veg_cheese_grilled_sandwich.jpg",
+          "image": "assets/menu/classic_veg_cheese_grilled_sandwich_0usx.jpg",
           "hidden": false
         },
         {
           "name": "Veggie Mayo Grilled Sandwich",
           "price": 170,
           "description": "Seasonal vegetables, green chutney and masala, loaded with mayonnaise.",
-          "image": "assets/menu/veggie_mayo_grilled_sandwich.jpg",
+          "image": "assets/menu/veggie_mayo_grilled_sandwich_6fgn.jpg",
           "hidden": false
         },
         {
           "name": "Cheese Chilli Grilled Sandwich",
           "price": 120,
           "description": "Mozzarella, chopped green capsicum and chillies.",
-          "image": "assets/menu/cheese_chilli_grilled_sandwich.jpg",
+          "image": "assets/menu/cheese_chilli_grilled_sandwich_rmrs.jpg",
           "hidden": false
         },
         {
           "name": "Corn & Cheese Sandwich",
           "price": 160,
           "description": "Creamy sweet corn and mozzarella.",
-          "image": "assets/menu/corn_cheese_sandwich.jpg",
+          "image": "assets/menu/corn_cheese_sandwich_rdua.jpg",
           "hidden": false
         },
         {
           "name": "Only Cheese Grill Sandwich",
           "price": 120,
           "description": "Grated cheese and Aadiraj sandwich masala.",
-          "image": "assets/menu/only_cheese_grill_sandwich.jpg",
+          "image": "assets/menu/only_cheese_grill_sandwich_27io.jpg",
           "hidden": false
         },
         {
           "name": "Chutney Cheese Grill Sandwich",
           "price": 140,
           "description": "Grated cheese with Aadiraj special green chutney.",
-          "image": "assets/menu/chutney_cheese_grill_sandwich.jpg",
+          "image": "assets/menu/chutney_cheese_grill_sandwich_mh5t.jpg",
           "hidden": false
         },
         {
           "name": "Paneer Tikka Sandwich",
           "price": 190,
           "description": "Marinated paneer and cheese cubes with tandoori spices, capsicum and mayo.",
-          "image": "assets/menu/paneer_tikka_sandwich.jpg",
+          "image": "assets/menu/paneer_tikka_sandwich_q2om.jpg",
           "hidden": false
         },
         {
           "name": "Bombay Masala Cheese Grilled Sandwich",
           "price": 160,
           "description": "Classic Mumbai style with spiced potato mash, tomatoes, onions and mint chutney.",
-          "image": "assets/menu/bombay_masala_cheese_grilled_sandwich.jpg",
+          "image": "assets/menu/bombay_masala_cheese_grilled_sandwich_001c.jpg",
           "hidden": false
         },
         {
           "name": "Schezwan Cheese Grilled Sandwich",
           "price": 170,
           "description": "Crisp vegetables and cheese with spicy Schezwan chutney.",
-          "image": "assets/menu/schezwan_cheese_grilled_sandwich.jpg",
+          "image": "assets/menu/schezwan_cheese_grilled_sandwich_oi3z.jpg",
           "hidden": false
         }
       ]
