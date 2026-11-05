@@ -230,42 +230,42 @@
           "name": "Classic Veg Momos",
           "price": 140,
           "description": "Cabbage, carrots, onions and aromatic herbs.",
-          "image": "assets/menu/classic_veg_momos.jpg",
+          "image": "assets/menu/classic_veg_momos_dc52.jpg",
           "hidden": false
         },
         {
           "name": "Paneer Veg Momos",
           "price": 160,
           "description": "Soft dumplings stuffed with seasoned crumbled paneer and Indian spices.",
-          "image": "assets/menu/paneer_veg_momos.jpg",
+          "image": "assets/menu/paneer_veg_momos_qk51.jpg",
           "hidden": false
         },
         {
           "name": "Corn & Cheese Momos",
           "price": 180,
           "description": "Sweet corn and melted cheese in delicate dough.",
-          "image": "assets/menu/corn_cheese_momos.jpg",
+          "image": "assets/menu/corn_cheese_momos_m2ye.jpg",
           "hidden": false
         },
         {
           "name": "Tandoori Veg Momos",
           "price": 200,
           "description": "Marinated in tandoori spices and grilled for a smoky flavour.",
-          "image": "assets/menu/tandoori_veg_momos.jpg",
+          "image": "assets/menu/tandoori_veg_momos_1vfq.jpg",
           "hidden": false
         },
         {
           "name": "Crispy Fried Veg Momos",
           "price": 200,
           "description": "Golden-fried with a crunchy outside and flavourful filling.",
-          "image": "assets/menu/crispy_fried_veg_momos.jpg",
+          "image": "assets/menu/crispy_fried_veg_momos_dr92.jpg",
           "hidden": false
         },
         {
-          "name": "Peri Peri Momos",
+          "name": "Peri Peri Fried Momos",
           "price": 200,
           "description": "Steamed and tossed in zesty, tangy peri peri seasoning.",
-          "image": "assets/menu/peri_peri_momos.jpg",
+          "image": "assets/menu/peri_peri_fried_momos.jpg",
           "hidden": false
         }
       ]
