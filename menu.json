@@ -453,49 +453,49 @@
           "name": "Sitafal Thick Shake",
           "price": 180,
           "description": "Seasonal custard apple.",
-          "image": "assets/menu/sitafal_thick_shake.jpg",
+          "image": "assets/menu/sitafal_thick_shake_64ts.jpg",
           "hidden": false
         },
         {
           "name": "Mango Thick Shake",
           "price": 200,
           "description": "Seasonal mango.",
-          "image": "assets/menu/mango_thick_shake.jpg",
+          "image": "assets/menu/mango_thick_shake_jlao.jpg",
           "hidden": false
         },
         {
           "name": "Chickoo Thick Shake",
           "price": 140,
           "description": "Seasonal chickoo.",
-          "image": "assets/menu/chickoo_thick_shake.jpg",
+          "image": "assets/menu/chickoo_thick_shake_sn1c.jpg",
           "hidden": false
         },
         {
           "name": "Strawberry Thick Shake",
           "price": 180,
           "description": "Strawberry milkshake.",
-          "image": "assets/menu/strawberry_thick_shake.jpg",
+          "image": "assets/menu/strawberry_thick_shake_wpu6.jpg",
           "hidden": false
         },
         {
           "name": "Lichi Cream Shake",
           "price": 180,
           "description": "Fragrant, creamy and rich with litchi.",
-          "image": "assets/menu/lichi_cream_shake.jpg",
+          "image": "assets/menu/lichi_cream_shake_qrx4.jpg",
           "hidden": false
         },
         {
           "name": "Musk Melon Shake",
           "price": 180,
           "description": "Refreshingly smooth, with natural melon sweetness.",
-          "image": "assets/menu/musk_melon_shake.jpg",
+          "image": "assets/menu/musk_melon_shake_2e1q.jpg",
           "hidden": false
         },
         {
           "name": "Cold Coffee Cream Milkshake",
           "price": 140,
           "description": "Rich, creamy cold coffee.",
-          "image": "assets/menu/cold_coffee_cream_milkshake.jpg",
+          "image": "assets/menu/cold_coffee_cream_milkshake_7vwi.jpg",
           "hidden": false
         }
       ]
