@@ -298,14 +298,14 @@
           "name": "Loaded Cheese Fries",
           "price": 190,
           "description": "Drizzled generously with warm, silky cheddar cheese sauce.",
-          "image": "assets/menu/loaded_cheese_fries.jpg",
+          "image": "assets/menu/loaded_cheese_fries_yy4z.jpg",
           "hidden": false
         },
         {
           "name": "Spicy Oregano Fries",
           "price": 150,
           "description": "Seasoned with oregano and chilli flakes.",
-          "image": "assets/menu/spicy_oregano_fries.jpg",
+          "image": "assets/menu/spicy_oregano_fries_77mi.jpg",
           "hidden": false
         }
       ]
