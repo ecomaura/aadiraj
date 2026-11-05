@@ -506,8 +506,8 @@
       "chip": "Falooda",
       "description": "Classic Indian dessert drinks.",
       "jain": false,
-      "image": "https://www.akshayglobalcuisine.com/images/falooda.png",
-      "imageAlt": "Traditional Indian falooda dessert",
+      "image": "assets/menu/falooda.jpg",
+      "imageAlt": "",
       "hidden": false,
       "items": [
         {
@@ -521,28 +521,28 @@
           "name": "Royal Falooda",
           "price": 160,
           "description": "Rose syrup, vermicelli, basil seeds, milk, ice cream, nuts and dried fruits.",
-          "image": "assets/menu/royal_falooda.jpg",
+          "image": "assets/menu/royal_falooda_fym8.jpg",
           "hidden": false
         },
         {
           "name": "Kesar Pista Falooda",
           "price": 180,
           "description": "Rich and creamy, with saffron and pistachios.",
-          "image": "assets/menu/kesar_pista_falooda.jpg",
+          "image": "assets/menu/kesar_pista_falooda_8eqj.jpg",
           "hidden": false
         },
         {
           "name": "Kulfi Falooda",
           "price": 190,
           "description": "Classic falooda topped with authentic Indian kulfi.",
-          "image": "assets/menu/kulfi_falooda.jpg",
+          "image": "assets/menu/kulfi_falooda_864p.jpg",
           "hidden": false
         },
         {
           "name": "Mango Falooda",
           "price": 150,
           "description": "Mango puree, mango ice cream, vermicelli and basil seeds.",
-          "image": "assets/menu/mango_falooda.jpg",
+          "image": "assets/menu/mango_falooda_hdg0.jpg",
           "hidden": false
         },
         {
@@ -556,35 +556,35 @@
           "name": "Dry Fruit Falooda",
           "price": 200,
           "description": "Almonds, cashews, pistachios and raisins with premium ice cream.",
-          "image": "assets/menu/dry_fruit_falooda.jpg",
+          "image": "assets/menu/dry_fruit_falooda_lsyg.jpg",
           "hidden": false
         },
         {
           "name": "Rose Falooda",
           "price": 140,
           "description": "Fragrant rose syrup, falooda sev, basil seeds and chilled milk.",
-          "image": "assets/menu/rose_falooda.jpg",
+          "image": "assets/menu/rose_falooda_umqq.jpg",
           "hidden": false
         },
         {
           "name": "Rabdi Falooda",
           "price": 180,
           "description": "Thick rabdi garnished with nuts.",
-          "image": "assets/menu/rabdi_falooda.jpg",
+          "image": "assets/menu/rabdi_falooda_knn7.jpg",
           "hidden": false
         },
         {
           "name": "Black Currant Falooda",
           "price": 180,
           "description": "Black currant syrup, ice cream, basil seeds and vermicelli.",
-          "image": "assets/menu/black_currant_falooda.jpg",
+          "image": "assets/menu/black_currant_falooda_j92l.jpg",
           "hidden": false
         },
         {
           "name": "Sitaphal (Custard Apple) Falooda",
           "price": 180,
           "description": "Creamy custard apple pulp with ice cream.",
-          "image": "assets/menu/sitaphal_custard_apple_falooda.jpg",
+          "image": "assets/menu/sitaphal_custard_apple_falooda_3q5y.jpg",
           "hidden": false
         }
       ]
