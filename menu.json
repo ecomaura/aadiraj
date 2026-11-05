@@ -14,21 +14,21 @@
           "name": "Classic Moong Sprout Chaat",
           "price": 130,
           "description": "Fresh green moong, onions, tomatoes, green chillies, coriander and chaat masala.",
-          "image": "assets/menu/classic_moong_sprout_chaat.jpg",
+          "image": "assets/menu/classic_moong_sprout_chaat_gzsl.jpg",
           "hidden": false
         },
         {
           "name": "Classic Chana Sprout Chaat",
           "price": 130,
           "description": "Sprouted black chana with onions, tomatoes, green chillies, coriander and chaat masala.",
-          "image": "assets/menu/classic_chana_sprout_chaat.jpg",
+          "image": "assets/menu/classic_chana_sprout_chaat_gg3x.jpg",
           "hidden": false
         },
         {
           "name": "Mixed Bean Protein Chaat",
           "price": 160,
           "description": "High-protein mix of sprouted moong, chana, kabuli chana, corn and mataki.",
-          "image": "assets/menu/mixed_bean_protein_chaat.jpg",
+          "image": "assets/menu/mixed_bean_protein_chaat_qobj.jpg",
           "hidden": false
         },
         {
