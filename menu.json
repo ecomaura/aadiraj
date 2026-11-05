@@ -378,21 +378,21 @@
           "name": "Classic Mosambi Juice",
           "price": 140,
           "description": "100% pure, cold-pressed sweet mosambi.",
-          "image": "assets/menu/classic_mosambi_juice.jpg",
+          "image": "assets/menu/classic_mosambi_juice_rv4y.jpg",
           "hidden": false
         },
         {
           "name": "ABC Detox Juice",
           "price": 180,
           "description": "Cold-pressed apple, beetroot and carrot.",
-          "image": "assets/menu/abc_detox_juice.jpg",
+          "image": "assets/menu/abc_detox_juice_qedc.jpg",
           "hidden": false
         },
         {
           "name": "Fresh Beetroot Juice",
           "price": 120,
           "description": "Naturally sweet, full of earthy flavour.",
-          "image": "assets/menu/fresh_beetroot_juice.jpg",
+          "image": "assets/menu/fresh_beetroot_juice_6qq5.jpg",
           "hidden": false
         },
         {
@@ -406,35 +406,35 @@
           "name": "Watermelon Mint Cooler",
           "price": 160,
           "description": "Muddled watermelon with fresh garden mint and a splash of lime.",
-          "image": "assets/menu/watermelon_mint_cooler.jpg",
+          "image": "assets/menu/watermelon_mint_cooler_b887.jpg",
           "hidden": false
         },
         {
           "name": "Fresh Lemon Water",
           "price": 60,
           "description": "Classic sweet-and-salted lemon cooler.",
-          "image": "assets/menu/fresh_lemon_water.jpg",
+          "image": "assets/menu/fresh_lemon_water_4efb.jpg",
           "hidden": false
         },
         {
           "name": "Fresh Lemon, Chia Seeds Juice",
           "price": 75,
           "description": "Sweet-and-salted lemon with chia seeds.",
-          "image": "assets/menu/fresh_lemon_chia_seeds_juice.jpg",
+          "image": "assets/menu/fresh_lemon_chia_seeds_juice_tv0n.jpg",
           "hidden": false
         },
         {
           "name": "Fresh Lemon, Mint Leaves and Chia Seeds Juice",
           "price": 80,
           "description": "Lemon, fresh mint and chia seeds to beat the heat.",
-          "image": "assets/menu/fresh_lemon_mint_leaves_and_chia_seeds_juice.jpg",
+          "image": "assets/menu/fresh_lemon_mint_leaves_and_chia_seeds_juice_nbme.jpg",
           "hidden": false
         },
         {
           "name": "Kokum Juice with Mint Leaves and Chia Seeds",
           "price": 80,
           "description": "Cooling kokum sherbet with fresh mint and chia seeds.",
-          "image": "assets/menu/kokum_juice_with_mint_leaves_and_chia_seeds.jpg",
+          "image": "assets/menu/kokum_juice_with_mint_leaves_and_chia_seeds_seu2.jpg",
           "hidden": false
         }
       ]
