@@ -445,8 +445,8 @@
       "chip": "Thick Shakes",
       "description": "Rich, ultra-creamy, made with premium dairy bases. 250 ml.",
       "jain": false,
-      "image": "assets/menu/sitafal_thick_shake.jpg",
-      "imageAlt": "Sitafal Thick Shake",
+      "image": "",
+      "imageAlt": "",
       "hidden": false,
       "items": [
         {
