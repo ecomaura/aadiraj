@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Aadiraj Menu Editor</title>
+<style>
+:root{--maroon:#7a1230;--maroon-d:#5a0c22;--gold:#c9a24b;--gold-l:#e6cf94;--cream:#faf4e8;--sand:#f2e8d3;--ink:#2a1a1d;--mute:#6a5a5d;--line:#dcc995;--green:#2f7a1f;--red:#b3261e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.5}
+[hidden]{display:none!important}
+button,input,select,textarea{font:inherit;color:inherit}
+input,textarea,select{width:100%;padding:8px 10px;border:1px solid #cdb98c;border-radius:4px;background:#fff}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
+textarea{resize:vertical}
+label{display:block;font-size:.75rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+label>input,label>textarea,label>select{margin-top:4px;text-transform:none;letter-spacing:0;font-weight:400;font-size:.95rem;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 16px;border:1.5px solid var(--maroon);background:transparent;color:var(--maroon);border-radius:4px;font-weight:600;font-size:.85rem;cursor:pointer;text-transform:none;letter-spacing:0}
+.btn:hover{background:rgba(122,18,48,.08)}
+.btn.primary{background:var(--maroon);color:#fff}
+.btn.primary:hover{background:var(--maroon-d)}
+.btn.primary:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:5px 10px;font-size:.78rem}
+.btn.danger{border-color:var(--red);color:var(--red)}
+.btn.danger:hover{background:rgba(179,38,30,.08)}
+.btn.ghost{border-color:var(--gold-l);color:var(--gold-l)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* login */
+#login{max-width:460px;margin:7vh auto;padding:0 18px}
+#login .box{background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px}
+#login h1{font-family:Georgia,serif;color:var(--maroon-d);font-size:1.7rem;margin-bottom:4px}
+#login p.sub{color:var(--mute);margin-bottom:20px}
+#login .fld{margin-bottom:14px}
+#login .chk{display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;font-weight:400;font-size:.88rem;margin:6px 0 18px}
+#login .chk input{width:auto;margin:0}
+#login details{margin-top:18px;font-size:.88rem;color:var(--mute)}
+#login summary{cursor:pointer;color:var(--maroon);font-weight:600}
+#login ol{margin:10px 0 0 18px}
+#login li{margin-bottom:5px}
+.err{background:#fdecea;color:var(--red);border:1px solid #f3b9b4;padding:10px 12px;border-radius:4px;margin-bottom:14px;font-size:.88rem}
+
+/* app */
+#topbar{position:sticky;top:0;z-index:20;background:var(--maroon-d);color:var(--cream);border-bottom:1px solid rgba(201,162,75,.4)}
+#topbar .in{max-width:1180px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#topbar .brand{font-family:Georgia,serif;font-weight:700;letter-spacing:.14em;color:var(--gold-l);font-size:1.15rem}
+#topbar .brand small{display:block;font-family:system-ui,sans-serif;letter-spacing:.04em;font-weight:400;color:#d9c6a6;font-size:.72rem}
+#topbar .sp{flex:1}
+#status{font-size:.82rem;color:#d9c6a6}
+#status.dirty{color:#ffd98a;font-weight:600}
+#layout{max-width:1180px;margin:0 auto;padding:18px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:22px;align-items:start}
+#nav{position:sticky;top:78px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px;max-height:calc(100vh - 100px);overflow:auto}
+#nav h3{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:4px 6px 8px}
+#nav button.cat{display:flex;width:100%;justify-content:space-between;gap:8px;align-items:center;text-align:left;background:none;border:0;border-radius:4px;padding:9px 10px;cursor:pointer;font-size:.9rem}
+#nav button.cat:hover{background:var(--sand)}
+#nav button.cat.on{background:var(--maroon);color:#fff}
+#nav button.cat .n{font-size:.75rem;opacity:.7;white-space:nowrap}
+#nav button.cat.off .nm{text-decoration:line-through;opacity:.6}
+#nav .add{margin-top:8px;width:100%}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:18px}
+.card h2{font-family:Georgia,serif;font-size:1.35rem;color:var(--maroon-d)}
+.head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.head .btns{display:flex;gap:6px;flex-wrap:wrap}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.chk{display:inline-flex!important;gap:7px;align-items:center;text-transform:none!important;letter-spacing:0!important;font-weight:500!important;font-size:.88rem!important;color:var(--ink)!important;cursor:pointer}
+.chk input{width:auto!important;margin:0!important}
+.catimg{display:flex;gap:14px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.catimg img{width:120px;height:90px;object-fit:cover;border-radius:6px;background:var(--sand);border:1px solid var(--line)}
+.catimg .col{flex:1;min-width:200px}
+.hint{font-size:.8rem;color:var(--mute);margin-top:6px}
+.warn{background:#fff6dc;border:1px solid #ecd48a;color:#6b5200;padding:9px 12px;border-radius:4px;font-size:.84rem;margin-bottom:14px}
+.itemshead{display:flex;justify-content:space-between;align-items:center;margin:6px 0 12px}
+.itemshead h3{font-family:Georgia,serif;font-size:1.25rem;color:var(--maroon)}
+.item{display:grid;grid-template-columns:128px minmax(0,1fr);gap:16px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:12px}
+.item.is-hidden{opacity:.6;background:#f6f1e6}
+.item .ph{display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.item .ph img{width:128px;height:96px;object-fit:cover;border-radius:6px;background:var(--sand);border:1px solid var(--line)}
+.item .ph .btn{cursor:pointer}
+.r2{display:grid;grid-template-columns:1fr 120px;gap:10px;margin-bottom:10px}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.tools select{width:auto;max-width:190px;padding:5px 8px;font-size:.8rem}
+.tools .sp{flex:1}
+.empty{padding:30px;text-align:center;color:var(--mute);border:1px dashed var(--line);border-radius:6px}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.3);z-index:50;max-width:92vw;font-size:.9rem}
+#toast.ok{background:var(--green)}
+#toast.bad{background:var(--red)}
+#toast a{color:#fff}
+@media(max-width:820px){
+ #layout{grid-template-columns:1fr;padding:12px}
+ #nav{position:static;max-height:none;display:flex;gap:6px;overflow-x:auto;padding:8px;align-items:center}
+ #nav h3{display:none}
+ #nav button.cat{width:auto;white-space:nowrap;border:1px solid var(--line);flex:none}
+ #nav .add{margin:0;width:auto;flex:none;white-space:nowrap}
+ .grid2{grid-template-columns:1fr}
+ .item{grid-template-columns:1fr}
+ .item .ph{flex-direction:row;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div id="login">
+  <div class="box">
+    <h1>Aadiraj Menu Editor</h1>
+    <p class="sub">Sign in with your GitHub access key to edit the menu.</p>
+    <div id="loginErr" class="err" hidden></div>
+    <div class="fld"><label>GitHub access token<input id="tok" type="password" autocomplete="off" placeholder="github_pat_…"></label></div>
+    <div class="fld"><label>Repository<input id="repoIn" value="ecomaura/aadiraj"></label></div>
+    <div class="fld"><label>Branch<input id="branchIn" value="main"></label></div>
+    <label class="chk"><input id="remember" type="checkbox" checked> Keep me signed in on this device</label>
+    <button id="loginBtn" class="btn primary" style="width:100%">Open editor</button>
+    <details>
+      <summary>How do I get an access token?</summary>
+      <ol>
+        <li>On GitHub go to <b>Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token</b>.</li>
+        <li>Under <b>Repository access</b>, choose <b>Only select repositories</b> and pick <b>aadiraj</b>.</li>
+        <li>Under <b>Permissions → Repository permissions</b>, set <b>Contents</b> to <b>Read and write</b>.</li>
+        <li>Generate it, copy it, and paste it above. The token stays in this browser only and is sent only to GitHub.</li>
+      </ol>
+    </details>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="app" hidden>
+  <div id="topbar"><div class="in">
+    <div class="brand">AADIRAJ<small>Menu editor</small></div>
+    <span class="sp"></span>
+    <span id="status">All changes saved</span>
+    <button id="discardBtn" class="btn ghost sm" disabled>Discard changes</button>
+    <button id="publishBtn" class="btn primary" disabled>Publish to website</button>
+    <button id="logoutBtn" class="btn ghost sm">Sign out</button>
+  </div></div>
+  <div id="layout">
+    <aside id="nav"></aside>
+    <main id="main"></main>
+  </div>
+</div>
+<div id="toast" hidden></div>
+
+<script>
+/* =========================================================
+   Shared renderer: turns menu data into the exact HTML
+   that lives between <!--MENU:START--> and <!--MENU:END-->
+   in index.html
+   ========================================================= */
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function renderMenuHtml(data){
+  var cats=data.categories.filter(function(c){return !c.hidden&&c.items.some(function(i){return !i.hidden;});});
+  var chips=cats.map(function(c){return '<a href="#'+esc(c.id)+'">'+esc(c.chip||c.name)+'</a>';}).join('');
+  var body=cats.map(function(c){
+    var items=c.items.filter(function(i){return !i.hidden;});
+    var img=c.image||items[0].image||'logo.jpg';
+    var alt=c.imageAlt||c.name;
+    var lis=items.map(function(i){
+      return '<li class="menu-item"><img class="menu-item-photo" src="'+esc(i.image||'logo.jpg')+'" alt="'+esc(i.name)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="menu-item-content"><div class="r"><b>'+esc(i.name)+'</b><em>\u20B9'+esc(i.price)+'</em></div><span>'+esc(i.description)+'</span></div></li>';
+    }).join('');
+    return '<div class="cat'+(c.jain?' jain':'')+'" id="'+esc(c.id)+'"><img src="'+esc(img)+'" alt="'+esc(alt)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="cat-h"><h3>'+esc(c.name)+'</h3><p>'+esc(c.description)+'</p></div><ul>'+lis+'</ul></div>';
+  }).join('\n');
+  return '  <div class="chips">'+chips+'</div>\n  <div class="cats">\n'+body+'\n  </div>';
+}
+
+/* =========================================================
+   Editor
+   ========================================================= */
+var $=function(s){return document.querySelector(s);};
+var token,repo,branch,data,origJson,menuSha,sel=0;
+var pending={};          // path -> {dataUrl,b64,committed}
+var knownPaths={};       // every image path in use / ever seen
+var STORE='aadiraj_menu_editor_v1';
+
+function slug(s){return String(s).toLowerCase().replace(/&/g,' ').replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'')||'item';}
+function rnd(){return Math.random().toString(36).slice(2,6);}
+function b64dec(b){return new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\s/g,'')),function(c){return c.charCodeAt(0);}));}
+
+async function gh(path,opts){
+  opts=opts||{};
+  var headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+  if(opts.body)headers['Content-Type']='application/json';
+  var res=await fetch('https://api.github.com/repos/'+repo+path,{method:opts.method||'GET',body:opts.body,headers:headers,cache:'no-store'});
+  if(!res.ok){
+    var m='';try{m=(await res.json()).message;}catch(e){}
+    if(res.status===401)m='The access token was rejected (expired or wrong).';
+    if(res.status===403&&!m)m='The token does not have permission.';
+    throw new Error(m||('GitHub error '+res.status));
+  }
+  return res.json();
+}
+
+/* ---------- toast ---------- */
+var toastT;
+function toast(msg,kind,ms){
+  var t=$('#toast');t.className=kind||'';t.innerHTML=msg;t.hidden=false;
+  clearTimeout(toastT);if(ms!==0)toastT=setTimeout(function(){t.hidden=true;},ms||3500);
+}
+
+/* ---------- login / load ---------- */
+function showLoginErr(m){var e=$('#loginErr');e.textContent=m;e.hidden=!m;}
+async function start(tok,rp,br,remember){
+  token=tok.trim();repo=rp.trim();branch=br.trim()||'main';
+  if(!token||!repo){showLoginErr('Please enter the token and repository.');return false;}
+  $('#loginBtn').disabled=true;$('#loginBtn').textContent='Checking…';showLoginErr('');
+  try{
+    var info=await gh('');
+    if(info.permissions&&info.permissions.push===false)throw new Error('This token can only read the repository. It needs Contents: Read and write.');
+    var f=await gh('/contents/menu.json?ref='+encodeURIComponent(branch));
+    menuSha=f.sha;
+    data=JSON.parse(b64dec(f.content));
+    normalize();
+    origJson=JSON.stringify(data);
+    pending={};sel=0;
+    collectKnown();
+    if(remember)localStorage.setItem(STORE,JSON.stringify({token:token,repo:repo,branch:branch}));
+    $('#login').hidden=true;$('#app').hidden=false;
+    renderAll();
+    return true;
+  }catch(e){
+    showLoginErr(e.message.indexOf('Not Found')>-1?'Could not find menu.json in that repository/branch. Upload menu.json first.':e.message);
+    return false;
+  }finally{
+    $('#loginBtn').disabled=false;$('#loginBtn').textContent='Open editor';
+  }
+}
+function normalize(){
+  data.categories.forEach(function(c){
+    c.id=c.id||slug(c.name);c.chip=c.chip||c.name;c.description=c.description||'';
+    c.jain=!!c.jain;c.image=c.image||'';c.imageAlt=c.imageAlt||'';c.hidden=!!c.hidden;
+    c.items=(c.items||[]).map(function(i){return {name:i.name||'',price:i.price===''?'':Number(i.price),description:i.description||'',image:i.image||'',hidden:!!i.hidden};});
+  });
+}
+function collectKnown(){
+  knownPaths={};
+  data.categories.forEach(function(c){
+    if(c.image)knownPaths[c.image]=1;
+    c.items.forEach(function(i){if(i.image)knownPaths[i.image]=1;});
+  });
+}
+
+/* ---------- helpers ---------- */
+function cur(){return data.categories[sel];}
+function firstImg(c){var it=c.items.filter(function(i){return !i.hidden&&i.image;})[0];return it?it.image:'';}
+function imgSrc(p){
+  if(!p)return 'logo.jpg';
+  if(pending[p])return pending[p].dataUrl;
+  return p;
+}
+window.fb=function(img){ // image fallback: load straight from GitHub if the website has not finished deploying
+  var p=img.getAttribute('data-path');
+  if(img.dataset.tried||!p||/^https?:/.test(p))return;
+  img.dataset.tried=1;
+  img.src='https://raw.githubusercontent.com/'+repo+'/'+branch+'/'+p;
+};
+function usedPending(){
+  var used={};
+  data.categories.forEach(function(c){
+    if(c.image&&pending[c.image])used[c.image]=1;
+    c.items.forEach(function(i){if(i.image&&pending[i.image])used[i.image]=1;});
+  });
+  return used;
+}
+function isDirty(){
+  if(JSON.stringify(data)!==origJson)return true;
+  var u=usedPending();
+  return Object.keys(u).some(function(p){return !pending[p].committed;});
+}
+function refreshStatus(){
+  var d=isDirty();
+  $('#status').textContent=d?'Unsaved changes':'All changes saved';
+  $('#status').className=d?'dirty':'';
+  $('#publishBtn').disabled=!d;$('#discardBtn').disabled=!d;
+}
+function uniqueId(name){
+  var base=slug(name).replace(/_/g,'-'),id=base,n=2;
+  var taken=['top','about','menu','visit'].concat(data.categories.map(function(c){return c.id;}));
+  while(taken.indexOf(id)>-1)id=base+'-'+(n++);
+  return id;
+}
+function uniquePath(name){
+  var p='assets/menu/'+slug(name)+'.jpg';
+  while(knownPaths[p]||pending[p])p='assets/menu/'+slug(name)+'_'+rnd()+'.jpg';
+  return p;
+}
+async function processImage(file){
+  var bmp=await createImageBitmap(file);
+  var W=800,H=600,c=document.createElement('canvas');c.width=W;c.height=H;
+  var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,W,H);
+  var s=Math.max(W/bmp.width,H/bmp.height),w=bmp.width*s,h=bmp.height*s;
+  x.drawImage(bmp,(W-w)/2,(H-h)/2,w,h);
+  var url=c.toDataURL('image/jpeg',0.85);
+  return {dataUrl:url,b64:url.split(',')[1]};
+}
+
+/* ---------- rendering ---------- */
+function renderAll(){renderNav();renderMain();refreshStatus();}
+function renderNav(){
+  var h='<h3>Categories</h3>';
+  data.categories.forEach(function(c,i){
+    var n=c.items.filter(function(x){return !x.hidden;}).length;
+    h+='<button class="cat'+(i===sel?' on':'')+(c.hidden?' off':'')+'" data-a="sel" data-i="'+i+'"><span class="nm">'+esc(c.name||'(unnamed)')+'</span><span class="n">'+n+'</span></button>';
+  });
+  h+='<button class="btn sm add" data-a="cat-add">+ Add category</button>';
+  $('#nav').innerHTML=h;
+}
+function itemCard(it,i,c){
+  var opts='<option value="" selected disabled>Move to…</option>';
+  data.categories.forEach(function(k,ki){if(ki!==sel)opts+='<option value="'+ki+'">'+esc(k.name)+'</option>';});
+  var p=it.image||'logo.jpg';
+  return '<div class="item'+(it.hidden?' is-hidden':'')+'" data-i="'+i+'">'+
+   '<div class="ph"><img src="'+esc(imgSrc(it.image))+'" data-path="'+esc(p)+'" onerror="fb(this)" alt="">'+
+   '<label class="btn sm">Change photo<input type="file" accept="image/*" hidden data-scope="item" data-i="'+i+'"></label></div>'+
+   '<div class="fields">'+
+    '<div class="r2"><label>Name<input data-scope="item" data-i="'+i+'" data-f="name" value="'+esc(it.name)+'"></label>'+
+    '<label>Price (₹)<input type="number" min="0" step="1" inputmode="numeric" data-scope="item" data-i="'+i+'" data-f="price" value="'+esc(it.price)+'"></label></div>'+
+    '<label>Description<textarea rows="2" data-scope="item" data-i="'+i+'" data-f="description">'+esc(it.description)+'</textarea></label>'+
+    '<div class="tools">'+
+     '<label class="chk"><input type="checkbox" data-scope="item" data-i="'+i+'" data-f="hidden"'+(it.hidden?' checked':'')+'> Hide from menu</label>'+
+     '<span class="sp"></span>'+
+     '<select data-a="move" data-i="'+i+'">'+opts+'</select>'+
+     '<button class="btn sm" data-a="item-up" data-i="'+i+'"'+(i===0?' disabled':'')+' title="Move up">↑</button>'+
+     '<button class="btn sm" data-a="item-down" data-i="'+i+'"'+(i===c.items.length-1?' disabled':'')+' title="Move down">↓</button>'+
+     '<button class="btn sm danger" data-a="item-del" data-i="'+i+'">Delete</button>'+
+    '</div></div></div>';
+}
+function renderMain(){
+  var c=cur();
+  if(!c){$('#main').innerHTML='<div class="empty">No categories yet. Add one from the left.</div>';return;}
+  var visible=c.items.filter(function(i){return !i.hidden;}).length;
+  var catPreview=c.image||firstImg(c);
+  var h='<div class="card">'+
+   '<div class="head"><h2>Category</h2><div class="btns">'+
+   '<button class="btn sm" data-a="cat-up"'+(sel===0?' disabled':'')+'>↑ Move up</button>'+
+   '<button class="btn sm" data-a="cat-down"'+(sel===data.categories.length-1?' disabled':'')+'>↓ Move down</button>'+
+   '<button class="btn sm danger" data-a="cat-del">Delete category</button></div></div>';
+  if(!visible)h+='<div class="warn">This category will not appear on the website until it has at least one visible product.</div>';
+  h+='<div class="grid2"><label>Name<input data-scope="cat" data-f="name" value="'+esc(c.name)+'"></label>'+
+     '<label>Short label (top shortcut buttons)<input data-scope="cat" data-f="chip" value="'+esc(c.chip)+'"></label></div>'+
+     '<label>Description<textarea rows="2" data-scope="cat" data-f="description">'+esc(c.description)+'</textarea></label>'+
+     '<div style="display:flex;gap:22px;margin-top:12px;flex-wrap:wrap">'+
+     '<label class="chk"><input type="checkbox" data-scope="cat" data-f="jain"'+(c.jain?' checked':'')+'> Jain section (green border)</label>'+
+     '<label class="chk"><input type="checkbox" data-scope="cat" data-f="hidden"'+(c.hidden?' checked':'')+'> Hide whole category</label></div>'+
+     '<div class="catimg"><img src="'+esc(imgSrc(catPreview))+'" data-path="'+esc(catPreview||'logo.jpg')+'" onerror="fb(this)" alt="">'+
+     '<div class="col"><label>Category banner photo (path or web link)<input data-scope="cat" data-f="image" value="'+esc(c.image)+'" placeholder="Leave empty to use the first product\'s photo"></label>'+
+     '<div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap"><label class="btn sm">Upload photo<input type="file" accept="image/*" hidden data-scope="cat"></label>'+
+     '<button class="btn sm" data-a="cat-img-clear">Use first product\'s photo</button></div></div></div></div>';
+  h+='<div class="itemshead"><h3>Products ('+c.items.length+')</h3><button class="btn primary sm" data-a="item-add">+ Add product</button></div>';
+  if(!c.items.length)h+='<div class="empty">No products here yet.</div>';
+  c.items.forEach(function(it,i){h+=itemCard(it,i,c);});
+  if(c.items.length>3)h+='<div style="text-align:center;margin:10px 0 40px"><button class="btn primary sm" data-a="item-add">+ Add product</button></div>';
+  $('#main').innerHTML=h;
+}
+
+/* ---------- events ---------- */
+function move(arr,i,d){var j=i+d;if(j<0||j>=arr.length)return false;var t=arr[i];arr[i]=arr[j];arr[j]=t;return true;}
+
+document.addEventListener('click',function(e){
+  var b=e.target.closest('[data-a]');if(!b||b.tagName==='SELECT')return;
+  var a=b.dataset.a,i=+b.dataset.i,c=cur();
+  if(a==='sel'){sel=i;renderAll();window.scrollTo({top:0});return;}
+  if(a==='cat-add'){
+    var n=prompt('Name of the new category (e.g. Tea & Coffee):');
+    if(!n||!n.trim())return;
+    data.categories.push({id:uniqueId(n),name:n.trim(),chip:n.trim(),description:'',jain:false,image:'',imageAlt:'',hidden:false,items:[]});
+    sel=data.categories.length-1;renderAll();return;
+  }
+  if(a==='cat-up'){if(move(data.categories,sel,-1))sel--;renderAll();return;}
+  if(a==='cat-down'){if(move(data.categories,sel,1))sel++;renderAll();return;}
+  if(a==='cat-del'){
+    if(!confirm('Delete the category "'+c.name+'" and all '+c.items.length+' products in it?'))return;
+    data.categories.splice(sel,1);sel=Math.max(0,sel-1);renderAll();return;
+  }
+  if(a==='cat-img-clear'){c.image='';c.imageAlt='';renderAll();return;}
+  if(a==='item-add'){
+    c.items.push({name:'New product',price:0,description:'',image:'',hidden:false});
+    renderAll();
+    var cards=document.querySelectorAll('.item');var last=cards[cards.length-1];
+    if(last){last.scrollIntoView({block:'center'});var inp=last.querySelector('[data-f="name"]');inp.focus();inp.select();}
+    return;
+  }
+  if(a==='item-up'){move(c.items,i,-1);renderAll();return;}
+  if(a==='item-down'){move(c.items,i,1);renderAll();return;}
+  if(a==='item-del'){
+    if(!confirm('Delete "'+c.items[i].name+'"?'))return;
+    c.items.splice(i,1);renderAll();return;
+  }
+});
+
+document.addEventListener('input',function(e){
+  var el=e.target;if(!el.dataset||!el.dataset.f)return;
+  var c=cur(),f=el.dataset.f,v;
+  if(el.type==='checkbox')v=el.checked;
+  else if(f==='price')v=el.value===''?'':Number(el.value);
+  else v=el.value;
+  if(el.dataset.scope==='cat'){
+    if(f==='name'&&c.chip===c.name)c.chip=v;
+    c[f]=v;
+    if(f==='image')c.imageAlt='';
+    if(f==='name')renderNav();
+    if(f==='hidden')renderNav();
+    if(f==='chip'&&c.chip===undefined)c.chip='';
+  }else{
+    var it=c.items[+el.dataset.i];it[f]=v;
+    if(f==='hidden'){el.closest('.item').classList.toggle('is-hidden',v);renderNav();}
+  }
+  refreshStatus();
+});
+
+document.addEventListener('change',async function(e){
+  if(!data)return;
+  var el=e.target,c=cur();
+  if(el.matches('select[data-a="move"]')){
+    var to=+el.value,i=+el.dataset.i;
+    if(isNaN(to))return;
+    var it=c.items.splice(i,1)[0];data.categories[to].items.push(it);
+    toast('Moved "'+esc(it.name)+'" to '+esc(data.categories[to].name),'ok');
+    renderAll();return;
+  }
+  if(el.type==='file'&&el.files&&el.files[0]){
+    var file=el.files[0];el.value='';
+    try{
+      toast('Preparing photo…','',0);
+      var img=await processImage(file);
+      var scope=el.dataset.scope,target=scope==='cat'?c:c.items[+el.dataset.i];
+      var path=uniquePath(target.name||'photo');
+      pending[path]={dataUrl:img.dataUrl,b64:img.b64,committed:false};
+      target.image=path;
+      if(scope==='cat')target.imageAlt='';
+      $('#toast').hidden=true;
+      renderAll();
+    }catch(err){toast('Could not read that image. Try a JPG or PNG file.','bad',5000);}
+  }
+});
+
+$('#loginBtn').onclick=function(){start($('#tok').value,$('#repoIn').value,$('#branchIn').value,$('#remember').checked);};
+$('#tok').addEventListener('keydown',function(e){if(e.key==='Enter')$('#loginBtn').click();});
+$('#logoutBtn').onclick=function(){
+  if(isDirty()&&!confirm('You have unpublished changes. Sign out anyway?'))return;
+  localStorage.removeItem(STORE);location.reload();
+};
+$('#discardBtn').onclick=function(){
+  if(!confirm('Throw away all unpublished changes?'))return;
+  data=JSON.parse(origJson);
+  Object.keys(pending).forEach(function(p){if(!pending[p].committed)delete pending[p];});
+  sel=Math.min(sel,data.categories.length-1);if(sel<0)sel=0;
+  renderAll();
+};
+window.addEventListener('beforeunload',function(e){if(data&&isDirty()){e.preventDefault();e.returnValue='';}});
+
+/* ---------- publish ---------- */
+function validate(){
+  for(var ci=0;ci<data.categories.length;ci++){
+    var c=data.categories[ci];
+    if(!String(c.name).trim())return 'A category has no name.';
+    for(var ii=0;ii<c.items.length;ii++){
+      var it=c.items[ii];
+      if(!String(it.name).trim())return 'A product in "'+c.name+'" has no name.';
+      if(it.price===''||isNaN(it.price)||it.price<0)return '"'+it.name+'" needs a valid price.';
+    }
+  }
+  return '';
+}
+$('#publishBtn').onclick=async function(){
+  var bad=validate();if(bad){toast(esc(bad),'bad',5000);return;}
+  var btn=$('#publishBtn');btn.disabled=true;btn.textContent='Publishing…';
+  try{
+    var head=(await gh('/git/ref/heads/'+encodeURIComponent(branch))).object.sha;
+    var latest=await gh('/contents/menu.json?ref='+encodeURIComponent(branch));
+    if(latest.sha!==menuSha)throw new Error('The menu was changed somewhere else since you opened this page. Reload the page and make your edits again.');
+    var idx=await gh('/contents/index.html?ref='+encodeURIComponent(branch));
+    var html=b64dec(idx.content);
+    var re=/<!--MENU:START-->[\s\S]*<!--MENU:END-->/;
+    if(!re.test(html))throw new Error('index.html is missing the <!--MENU:START--> / <!--MENU:END--> markers.');
+    html=html.replace(re,function(){return '<!--MENU:START-->\n'+renderMenuHtml(data)+'\n<!--MENU:END-->';});
+    var json=JSON.stringify(data,null,2)+'\n';
+
+    var tree=[];
+    var jb=await gh('/git/blobs',{method:'POST',body:JSON.stringify({content:json,encoding:'utf-8'})});
+    tree.push({path:'menu.json',mode:'100644',type:'blob',sha:jb.sha});
+    var hb=await gh('/git/blobs',{method:'POST',body:JSON.stringify({content:html,encoding:'utf-8'})});
+    tree.push({path:'index.html',mode:'100644',type:'blob',sha:hb.sha});
+    var used=usedPending(),newPaths=[];
+    for(var p in used){
+      if(pending[p].committed)continue;
+      var ib=await gh('/git/blobs',{method:'POST',body:JSON.stringify({content:pending[p].b64,encoding:'base64'})});
+      tree.push({path:p,mode:'100644',type:'blob',sha:ib.sha});newPaths.push(p);
+    }
+    var commit=await gh('/git/commits/'+head);
+    var nt=await gh('/git/trees',{method:'POST',body:JSON.stringify({base_tree:commit.tree.sha,tree:tree})});
+    var nc=await gh('/git/commits',{method:'POST',body:JSON.stringify({message:'Menu update via editor',tree:nt.sha,parents:[head]})});
+    await gh('/git/refs/heads/'+encodeURIComponent(branch),{method:'PATCH',body:JSON.stringify({sha:nc.sha})});
+
+    menuSha=jb.sha;origJson=JSON.stringify(data);
+    newPaths.forEach(function(p){pending[p].committed=true;knownPaths[p]=1;});
+    collectKnown();
+    renderAll();
+    toast('Published! The live website updates in about a minute.','ok',7000);
+  }catch(err){
+    toast('Could not publish: '+esc(err.message),'bad',9000);
+  }finally{
+    btn.textContent='Publish to website';refreshStatus();
+  }
+};
+
+/* ---------- auto sign-in ---------- */
+(function(){
+  try{
+    var s=JSON.parse(localStorage.getItem(STORE)||'null');
+    if(s&&s.token){
+      $('#tok').value=s.token;$('#repoIn').value=s.repo;$('#branchIn').value=s.branch;
+      start(s.token,s.repo,s.branch,true);
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

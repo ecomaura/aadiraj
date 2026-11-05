@@ -1,0 +1,593 @@
+{
+  "categories": [
+    {
+      "id": "chaat",
+      "name": "Sprout Chaats",
+      "chip": "Sprout Chaats",
+      "description": "Nutritious, freshly sprouted and tossed with Aadiraj special chutney and cold-pressed lemon juice.",
+      "jain": false,
+      "image": "assets/menu/classic_moong_sprout_chaat.jpg",
+      "imageAlt": "Classic Moong Sprout Chaat",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Classic Moong Sprout Chaat",
+          "price": 130,
+          "description": "Fresh green moong, onions, tomatoes, green chillies, coriander and chaat masala.",
+          "image": "assets/menu/classic_moong_sprout_chaat.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Classic Chana Sprout Chaat",
+          "price": 130,
+          "description": "Sprouted black chana with onions, tomatoes, green chillies, coriander and chaat masala.",
+          "image": "assets/menu/classic_chana_sprout_chaat.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Mixed Bean Protein Chaat",
+          "price": 160,
+          "description": "High-protein mix of sprouted moong, chana, kabuli chana, corn and mataki.",
+          "image": "assets/menu/mixed_bean_protein_chaat.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Corn & Veggi Crunch",
+          "price": 150,
+          "description": "Steamed sweet corn with finely diced onions, tomatoes, green chillies and coriander.",
+          "image": "assets/menu/corn_veggi_crunch.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Aloo Sprout Fusion Chaat",
+          "price": 150,
+          "description": "Steamed sprouts with boiled potato cubes, sweet-sour chutneys and crispy sev.",
+          "image": "assets/menu/aloo_sprout_fusion_chaat.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Aadiraj Special Sprout & Vegetable Fusion",
+          "price": 175,
+          "description": "Sprouted moong, chana, kabuli chana, corn and mataki with cucumber, beetroot and carrot.",
+          "image": "assets/menu/aadiraj_special_sprout_vegetable_fusion.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sandwiches",
+      "chip": "Sandwiches",
+      "description": "Fresh bread, Amul butter, crisp seasonal vegetables, Aadiraj green chutney and our special sandwich masala.",
+      "jain": false,
+      "image": "assets/menu/classic_veg_sandwich.jpg",
+      "imageAlt": "Classic Veg Sandwich",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Classic Veg Sandwich",
+          "price": 110,
+          "description": "Triangle bread, crisp seasonal vegetables, green chutney and sandwich masala.",
+          "image": "assets/menu/classic_veg_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Classic Veg Sandwich with Cheese",
+          "price": 170,
+          "description": "The classic, with a slice of cheese.",
+          "image": "assets/menu/classic_veg_sandwich_with_cheese.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "grill",
+      "name": "Magic of Grill: Crispy Sandwiches",
+      "chip": "Magic of Grill",
+      "description": "Grilled until golden and crisp.",
+      "jain": false,
+      "image": "assets/menu/classic_veg_grilled_sandwich.jpg",
+      "imageAlt": "Classic Veg Grilled Sandwich",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Classic Veg Grilled Sandwich",
+          "price": 140,
+          "description": "Seasonal vegetables, green chutney and sandwich masala.",
+          "image": "assets/menu/classic_veg_grilled_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Classic Veg Cheese Grilled Sandwich",
+          "price": 170,
+          "description": "Fresh vegetables with melted cheese slices and green chutney.",
+          "image": "assets/menu/classic_veg_cheese_grilled_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Veggie Mayo Grilled Sandwich",
+          "price": 170,
+          "description": "Seasonal vegetables, green chutney and masala, loaded with mayonnaise.",
+          "image": "assets/menu/veggie_mayo_grilled_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Cheese Chilli Grilled Sandwich",
+          "price": 120,
+          "description": "Mozzarella, chopped green capsicum and chillies.",
+          "image": "assets/menu/cheese_chilli_grilled_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Corn & Cheese Sandwich",
+          "price": 160,
+          "description": "Creamy sweet corn and mozzarella.",
+          "image": "assets/menu/corn_cheese_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Only Cheese Grill Sandwich",
+          "price": 120,
+          "description": "Grated cheese and Aadiraj sandwich masala.",
+          "image": "assets/menu/only_cheese_grill_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Chutney Cheese Grill Sandwich",
+          "price": 140,
+          "description": "Grated cheese with Aadiraj special green chutney.",
+          "image": "assets/menu/chutney_cheese_grill_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Paneer Tikka Sandwich",
+          "price": 190,
+          "description": "Marinated paneer and cheese cubes with tandoori spices, capsicum and mayo.",
+          "image": "assets/menu/paneer_tikka_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Bombay Masala Cheese Grilled Sandwich",
+          "price": 160,
+          "description": "Classic Mumbai style with spiced potato mash, tomatoes, onions and mint chutney.",
+          "image": "assets/menu/bombay_masala_cheese_grilled_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Schezwan Cheese Grilled Sandwich",
+          "price": 170,
+          "description": "Crisp vegetables and cheese with spicy Schezwan chutney.",
+          "image": "assets/menu/schezwan_cheese_grilled_sandwich.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "jain",
+      "name": "Jain Special",
+      "chip": "Jain Special",
+      "description": "No onion, no garlic. Sandwiches, pizza and momos.",
+      "jain": true,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Cw_300%2Ch_300%2Cc_fit/FOOD_CATALOG/IMAGES/CMS/2025/5/24/946530e7-3239-412a-82a7-5dc9bd816609_97046204-bea4-4ae3-93a6-a0a5aceee8a6.jpg",
+      "imageAlt": "Vegetarian Jain-style pizza with cheese and vegetables",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Jain Classic Veg Grilled Sandwich",
+          "price": 140,
+          "description": "Fresh bread, Amul butter, crisp vegetables and green chutney.",
+          "image": "assets/menu/jain_classic_veg_grilled_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Jain Classic Veg Cheese Grilled Sandwich",
+          "price": 170,
+          "description": "Fresh vegetables and melted cheese slices with green chutney.",
+          "image": "assets/menu/jain_classic_veg_cheese_grilled_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Jain Classic Veg Sandwich",
+          "price": 110,
+          "description": "Seasonal vegetables, green chutney and in-house sandwich masala.",
+          "image": "assets/menu/jain_classic_veg_sandwich.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Jain Classic Veg Sandwich with Cheese",
+          "price": 140,
+          "description": "The Jain classic, with a cheese slice.",
+          "image": "assets/menu/jain_classic_veg_sandwich_with_cheese.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Jain Classic Veg Momos",
+          "price": 140,
+          "description": "Steamed, juicy dumplings filled with a flavourful vegetable mix.",
+          "image": "assets/menu/jain_classic_veg_momos.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Jain Veggie Delight Pizza",
+          "price": 250,
+          "description": "8\" base with capsicum, tomatoes, sweet corn, black olives and cheese, with chilli flakes, oregano and pepper.",
+          "image": "assets/menu/jain_veggie_delight_pizza.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "momos",
+      "name": "Veg Momos",
+      "chip": "Veg Momos",
+      "description": "Steamed, juicy and made fresh.",
+      "jain": false,
+      "image": "assets/menu/classic_veg_momos.jpg",
+      "imageAlt": "Classic Veg Momos",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Classic Veg Momos",
+          "price": 140,
+          "description": "Cabbage, carrots, onions and aromatic herbs.",
+          "image": "assets/menu/classic_veg_momos.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Paneer Veg Momos",
+          "price": 160,
+          "description": "Soft dumplings stuffed with seasoned crumbled paneer and Indian spices.",
+          "image": "assets/menu/paneer_veg_momos.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Corn & Cheese Momos",
+          "price": 180,
+          "description": "Sweet corn and melted cheese in delicate dough.",
+          "image": "assets/menu/corn_cheese_momos.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Tandoori Veg Momos",
+          "price": 200,
+          "description": "Marinated in tandoori spices and grilled for a smoky flavour.",
+          "image": "assets/menu/tandoori_veg_momos.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Crispy Fried Veg Momos",
+          "price": 200,
+          "description": "Golden-fried with a crunchy outside and flavourful filling.",
+          "image": "assets/menu/crispy_fried_veg_momos.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Peri Peri Momos",
+          "price": 200,
+          "description": "Steamed and tossed in zesty, tangy peri peri seasoning.",
+          "image": "assets/menu/peri_peri_momos.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "fries",
+      "name": "French Fries & Add-ons",
+      "chip": "French Fries & Add-ons",
+      "description": "Golden, deep-fried and crisp.",
+      "jain": false,
+      "image": "assets/menu/classic_salted_fries.jpg",
+      "imageAlt": "Classic Salted Fries",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Classic Salted Fries",
+          "price": 130,
+          "description": "Crisp potato strips with fine sea salt.",
+          "image": "assets/menu/classic_salted_fries.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Peri-Peri Spicy Fries",
+          "price": 160,
+          "description": "Tossed in fiery, tangy peri-peri spice dust.",
+          "image": "assets/menu/peri_peri_spicy_fries.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Loaded Cheese Fries",
+          "price": 190,
+          "description": "Drizzled generously with warm, silky cheddar cheese sauce.",
+          "image": "assets/menu/loaded_cheese_fries.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Spicy Oregano Fries",
+          "price": 150,
+          "description": "Seasoned with oregano and chilli flakes.",
+          "image": "assets/menu/spicy_oregano_fries.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizzas",
+      "chip": "Pizzas",
+      "description": "All on an 8\" pizza base.",
+      "jain": false,
+      "image": "assets/menu/mexican_fiesta_pizza.jpg",
+      "imageAlt": "Mexican Fiesta Pizza",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Mexican Fiesta Pizza",
+          "price": 270,
+          "description": "Jalapeños, black olives, sweet corn, onion, tomatoes, capsicum and Mexican herbs.",
+          "image": "assets/menu/mexican_fiesta_pizza.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Schezwan Veg Pizza",
+          "price": 230,
+          "description": "Spicy Schezwan sauce, crunchy vegetables and melted cheese.",
+          "image": "assets/menu/schezwan_veg_pizza.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Corn & Cheese Pizza",
+          "price": 220,
+          "description": "Sweet golden corn with creamy mozzarella.",
+          "image": "assets/menu/corn_cheese_pizza.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Farm Fresh Pizza",
+          "price": 180,
+          "description": "Capsicum, onion and tomato with mozzarella and aromatic herbs.",
+          "image": "assets/menu/farm_fresh_pizza.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Veggie Delight Pizza",
+          "price": 250,
+          "description": "Onions, capsicum, tomatoes, sweet corn, black olives and cheese.",
+          "image": "assets/menu/veggie_delight_pizza.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "juices",
+      "name": "Fresh Juices & Coolers",
+      "chip": "Fresh Juices & Coolers",
+      "description": "Every glass is 250 ml.",
+      "jain": false,
+      "image": "assets/menu/classic_orange_juice.jpg",
+      "imageAlt": "Classic Orange Juice",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Classic Orange Juice",
+          "price": 120,
+          "description": "100% pure, cold-pressed sweet oranges.",
+          "image": "assets/menu/classic_orange_juice.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Classic Mosambi Juice",
+          "price": 140,
+          "description": "100% pure, cold-pressed sweet mosambi.",
+          "image": "assets/menu/classic_mosambi_juice.jpg",
+          "hidden": false
+        },
+        {
+          "name": "ABC Detox Juice",
+          "price": 180,
+          "description": "Cold-pressed apple, beetroot and carrot.",
+          "image": "assets/menu/abc_detox_juice.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Fresh Beetroot Juice",
+          "price": 120,
+          "description": "Naturally sweet, full of earthy flavour.",
+          "image": "assets/menu/fresh_beetroot_juice.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Green Glow Elixir",
+          "price": 200,
+          "description": "Cucumber, green apple, amla and celery.",
+          "image": "assets/menu/green_glow_elixir.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Watermelon Mint Cooler",
+          "price": 160,
+          "description": "Muddled watermelon with fresh garden mint and a splash of lime.",
+          "image": "assets/menu/watermelon_mint_cooler.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Fresh Lemon Water",
+          "price": 60,
+          "description": "Classic sweet-and-salted lemon cooler.",
+          "image": "assets/menu/fresh_lemon_water.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Fresh Lemon, Chia Seeds Juice",
+          "price": 75,
+          "description": "Sweet-and-salted lemon with chia seeds.",
+          "image": "assets/menu/fresh_lemon_chia_seeds_juice.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Fresh Lemon, Mint Leaves and Chia Seeds Juice",
+          "price": 80,
+          "description": "Lemon, fresh mint and chia seeds to beat the heat.",
+          "image": "assets/menu/fresh_lemon_mint_leaves_and_chia_seeds_juice.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Kokum Juice with Mint Leaves and Chia Seeds",
+          "price": 80,
+          "description": "Cooling kokum sherbet with fresh mint and chia seeds.",
+          "image": "assets/menu/kokum_juice_with_mint_leaves_and_chia_seeds.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Thick Shakes",
+      "chip": "Thick Shakes",
+      "description": "Rich, ultra-creamy, made with premium dairy bases. 250 ml.",
+      "jain": false,
+      "image": "assets/menu/sitafal_thick_shake.jpg",
+      "imageAlt": "Sitafal Thick Shake",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Sitafal Thick Shake",
+          "price": 180,
+          "description": "Seasonal custard apple.",
+          "image": "assets/menu/sitafal_thick_shake.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Mango Thick Shake",
+          "price": 200,
+          "description": "Seasonal mango.",
+          "image": "assets/menu/mango_thick_shake.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Chickoo Thick Shake",
+          "price": 140,
+          "description": "Seasonal chickoo.",
+          "image": "assets/menu/chickoo_thick_shake.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Strawberry Thick Shake",
+          "price": 180,
+          "description": "Strawberry milkshake.",
+          "image": "assets/menu/strawberry_thick_shake.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Lichi Cream Shake",
+          "price": 180,
+          "description": "Fragrant, creamy and rich with litchi.",
+          "image": "assets/menu/lichi_cream_shake.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Musk Melon Shake",
+          "price": 180,
+          "description": "Refreshingly smooth, with natural melon sweetness.",
+          "image": "assets/menu/musk_melon_shake.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Cold Coffee Cream Milkshake",
+          "price": 140,
+          "description": "Rich, creamy cold coffee.",
+          "image": "assets/menu/cold_coffee_cream_milkshake.jpg",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "falooda",
+      "name": "Falooda",
+      "chip": "Falooda",
+      "description": "Classic Indian dessert drinks.",
+      "jain": false,
+      "image": "https://www.akshayglobalcuisine.com/images/falooda.png",
+      "imageAlt": "Traditional Indian falooda dessert",
+      "hidden": false,
+      "items": [
+        {
+          "name": "Aadiraj Special Falooda",
+          "price": 220,
+          "description": "Mix fruit syrup, vermicelli, basil seeds, kulfi, dry fruits and rich dessert topping.",
+          "image": "assets/menu/aadiraj_special_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Royal Falooda",
+          "price": 160,
+          "description": "Rose syrup, vermicelli, basil seeds, milk, ice cream, nuts and dried fruits.",
+          "image": "assets/menu/royal_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Kesar Pista Falooda",
+          "price": 180,
+          "description": "Rich and creamy, with saffron and pistachios.",
+          "image": "assets/menu/kesar_pista_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Kulfi Falooda",
+          "price": 190,
+          "description": "Classic falooda topped with authentic Indian kulfi.",
+          "image": "assets/menu/kulfi_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Mango Falooda",
+          "price": 150,
+          "description": "Mango puree, mango ice cream, vermicelli and basil seeds.",
+          "image": "assets/menu/mango_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Strawberry Falooda",
+          "price": 150,
+          "description": "Strawberry syrup, milk, basil seeds, vermicelli and fresh strawberries.",
+          "image": "assets/menu/strawberry_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Dry Fruit Falooda",
+          "price": 200,
+          "description": "Almonds, cashews, pistachios and raisins with premium ice cream.",
+          "image": "assets/menu/dry_fruit_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Rose Falooda",
+          "price": 140,
+          "description": "Fragrant rose syrup, falooda sev, basil seeds and chilled milk.",
+          "image": "assets/menu/rose_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Rabdi Falooda",
+          "price": 180,
+          "description": "Thick rabdi garnished with nuts.",
+          "image": "assets/menu/rabdi_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Black Currant Falooda",
+          "price": 180,
+          "description": "Black currant syrup, ice cream, basil seeds and vermicelli.",
+          "image": "assets/menu/black_currant_falooda.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Sitaphal (Custard Apple) Falooda",
+          "price": 180,
+          "description": "Creamy custard apple pulp with ice cream.",
+          "image": "assets/menu/sitaphal_custard_apple_falooda.jpg",
+          "hidden": false
+        }
+      ]
+    }
+  ]
+}
