@@ -176,42 +176,42 @@
           "name": "Jain Classic Veg Grilled Sandwich",
           "price": 140,
           "description": "Fresh bread, Amul butter, crisp vegetables and green chutney.",
-          "image": "assets/menu/jain_classic_veg_grilled_sandwich.jpg",
+          "image": "assets/menu/jain_classic_veg_grilled_sandwich_jqrs.jpg",
           "hidden": false
         },
         {
           "name": "Jain Classic Veg Cheese Grilled Sandwich",
           "price": 170,
           "description": "Fresh vegetables and melted cheese slices with green chutney.",
-          "image": "assets/menu/jain_classic_veg_cheese_grilled_sandwich.jpg",
+          "image": "assets/menu/jain_classic_veg_cheese_grilled_sandwich_nl89.jpg",
           "hidden": false
         },
         {
           "name": "Jain Classic Veg Sandwich",
           "price": 110,
           "description": "Seasonal vegetables, green chutney and in-house sandwich masala.",
-          "image": "assets/menu/jain_classic_veg_sandwich.jpg",
+          "image": "assets/menu/jain_classic_veg_sandwich_8xvv.jpg",
           "hidden": false
         },
         {
           "name": "Jain Classic Veg Sandwich with Cheese",
           "price": 140,
           "description": "The Jain classic, with a cheese slice.",
-          "image": "assets/menu/jain_classic_veg_sandwich_with_cheese.jpg",
+          "image": "assets/menu/jain_classic_veg_sandwich_with_cheese_dwcw.jpg",
           "hidden": false
         },
         {
           "name": "Jain Classic Veg Momos",
           "price": 140,
           "description": "Steamed, juicy dumplings filled with a flavourful vegetable mix.",
-          "image": "assets/menu/jain_classic_veg_momos.jpg",
+          "image": "assets/menu/jain_classic_veg_momos_oabd.jpg",
           "hidden": false
         },
         {
           "name": "Jain Veggie Delight Pizza",
           "price": 250,
           "description": "8\" base with capsicum, tomatoes, sweet corn, black olives and cheese, with chilli flakes, oregano and pepper.",
-          "image": "assets/menu/jain_veggie_delight_pizza.jpg",
+          "image": "assets/menu/jain_veggie_delight_pizza_ubu1.jpg",
           "hidden": false
         }
       ]
