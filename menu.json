@@ -307,6 +307,27 @@
           "description": "Seasoned with oregano and chilli flakes.",
           "image": "assets/menu/spicy_oregano_fries_77mi.jpg",
           "hidden": false
+        },
+        {
+          "name": "Mayo Dip",
+          "price": 30,
+          "description": "Plain and Eggless mayonnaise blended with garlic ",
+          "image": "assets/menu/mayo_dip.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Cheese Dip",
+          "price": 30,
+          "description": "Thick, velvety, and smooth",
+          "image": "assets/menu/cheese_dip.jpg",
+          "hidden": false
+        },
+        {
+          "name": "Tandoori Dip",
+          "price": 30,
+          "description": " Smoked, spicy, tangy, and savory.",
+          "image": "assets/menu/tandoori_dip.jpg",
+          "hidden": false
         }
       ]
     },
